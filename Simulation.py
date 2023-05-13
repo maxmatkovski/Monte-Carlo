@@ -24,3 +24,7 @@ stocks = [stock + '.AX' for stock in stockList]
 # parameter very important for covariance matrix which will affect monte carlo simulation. 
 endDate = dt.datetime.now()
 startDate = endDate - dt.timedelta(days=300)
+
+meanReturns, covMatrix = get_data(stocks, startDate, endDate)
+
+print(meanReturns)
