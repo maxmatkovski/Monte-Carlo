@@ -2,11 +2,14 @@
 Implementation of Monte Carlo method to simulate stock portfolio
 '''
 
+
+import pandas_datareader as pdr
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime as dt
-from pandas_datareader import data as pdr
+
 
 # import data
 
@@ -28,3 +31,6 @@ startDate = endDate - dt.timedelta(days=300)
 meanReturns, covMatrix = get_data(stocks, startDate, endDate)
 
 print(meanReturns)
+
+
+# https://www.youtube.com/watch?v=6-dhdMDiYWQ&t=377s&ab_channel=QuantPy
